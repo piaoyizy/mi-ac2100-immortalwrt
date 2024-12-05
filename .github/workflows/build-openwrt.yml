@@ -9,7 +9,7 @@
 #
 name: Build Immortalwrt-AC2100
 
-# permissions: write-all
+permissions: write-all
 
 on:
   repository_dispatch:
@@ -34,8 +34,6 @@ env:
   UPLOAD_WETRANSFER: false
   UPLOAD_RELEASE: true
   TZ: Asia/Shanghai
-  DOCKER_BUILD_SH: immortalwrtBulid.sh
-  CACHE_TOOLCHAIN: true
 
 jobs:
   build:
@@ -49,7 +47,6 @@ jobs:
       env:
         DEBIAN_FRONTEND: noninteractive
       run: |
-        chmod +x $FREE_DISK_SH && $FREE_DISK_SH
         sudo -E apt-get -qq update
         sudo -E apt-get -qq autoclean
         sudo -E apt-get -qq autoremove --purge
