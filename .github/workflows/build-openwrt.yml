@@ -80,8 +80,9 @@ jobs:
       uses: klever1988/cachewrtbuild@main
       with:
         ccache: 'true'
-        mixkey: 'immortalwrt-24.10_mi-ac2100'
+        mixkey: 'immortalwrt-24.10-mi-ac2100'
         prefix: ${{ env.OPENWRT_PATH }}   
+        
     - name: Install feeds
       run: cd openwrt && ./scripts/feeds install -a
 
