@@ -10,6 +10,7 @@
 
 name: Build OpenWrt
 
+permissions: write-all
 env:
   REPO_URL: https://github.com/immortalwrt/immortalwrt
   REPO_BRANCH: openwrt-23.05
