@@ -9,7 +9,7 @@
 #
 name: Build Immortalwrt-AC2100
 
-permissions: write-all
+# permissions: write-all
 
 on:
   repository_dispatch:
