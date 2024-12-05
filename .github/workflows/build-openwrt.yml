@@ -160,9 +160,9 @@ jobs:
       id: tag
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       run: |
-        echo -e "✅ Immortalwrt-24.10-AC2100 \n" >> release.txt
+        echo -e "✅ Immortalwrt-23.05-AC2100 \n" >> release.txt
         touch release.txt
-        echo "release_tag=$(date +"%Y.%m.%d-%H%M"-Immortalwrt-24.10-AC2100)" >> $GITHUB_OUTPUT
+        echo "release_tag=$(date +"%Y.%m.%d-%H%M"-Immortalwrt-23.05)" >> $GITHUB_OUTPUT
         echo "status=success" >> $GITHUB_OUTPUT
 
     - name: 发布新版固件
