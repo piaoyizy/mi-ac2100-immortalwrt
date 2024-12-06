@@ -13,6 +13,10 @@ sed -i 's/192.168.1.1/10.0.0.1/g' package/base-files/files/bin/config_generate
 
 rm -rf package/feeds/luci/luci-app-passwall/
 rm -rf feeds/packages/net/{xray-core,v2ray-core,v2ray-geodata,sing-box,chinadns-ng}
+rm -rf feeds/packages/utils/v2dat
+rm -rf feeds/packages/lang/golang
+git clone https://github.com/kenzok8/golang feeds/packages/lang/golang
 git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/openwrt-passwall
 git clone https://github.com/xiaorouji/openwrt-passwall.git package/helloworld
+
 sed -i 's/api.is_finded("fw3")/api.is_finded("fw30")/g' package/helloworld/luci-app-passwall/luasrc/model/cbi/passwall/client/other.lua
