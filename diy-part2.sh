@@ -19,4 +19,3 @@ git clone https://github.com/kenzok8/golang feeds/packages/lang/golang
 git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/openwrt-passwall
 git clone https://github.com/xiaorouji/openwrt-passwall.git package/helloworld
 
-sed -i 's/api.is_finded("fw3")/api.is_finded("fw30")/g' package/helloworld/luci-app-passwall/luasrc/model/cbi/passwall/client/other.lua
