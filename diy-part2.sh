@@ -18,7 +18,7 @@ function git_sparse_clone() {
 }
 
 rm -rf package/feeds/luci/luci-app-openclash/
-git_sparse_clone dev https://github.com/vernesong/OpenClash package/luci-app-openclash
+git_sparse_clone dev https://github.com/vernesong/OpenClash luci-app-openclash
 # Modify default IP
 sed -i 's/192.168.1.1/10.0.0.1/g' package/base-files/files/bin/config_generate
 
