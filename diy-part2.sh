@@ -17,8 +17,10 @@ function git_sparse_clone() {
   cd .. && rm -rf $repodir
 }
 
-rm -rf package/feeds/luci/luci-app-openclash/
-git_sparse_clone dev https://github.com/vernesong/OpenClash luci-app-openclash
+rm -rf package/feeds/luci/luci-app-passwall/
+rm -rf feeds/packages/net/{xray-core,v2ray-core,v2ray-geodata,sing-box,chinadns-ng}
+git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/openwrt-passwall
+git clone https://github.com/xiaorouji/openwrt-passwall.git package/passwall
 # Modify default IP
 sed -i 's/192.168.1.1/10.0.0.1/g' package/base-files/files/bin/config_generate
 
